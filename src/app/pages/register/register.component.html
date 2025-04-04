@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class=" col-md-7">
+        <div class="color card shadow-lg rounded">
+          <div class="color card-body">
+            <h2 class="color text-center mb-5 mt-4 text-decoration-underline">REGISTRO</h2>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="color needs-validation">
+              <div class="color mb-5 text-center form-group">
+                <label for="nombre" class="color form-label">NOMBRE</label>
+                <input type="text" class="form-control mt-3 mb-1" id="nombre" formControlName="nombre">
+                <div *ngIf="registerForm.get('nombre')?.invalid && (registerForm.get('nombre')?.touched || submitted)" class="color invalid-feedback mb-4">El nombre es obligatorio.</div>
+              </div>
+              <div class="color mb-5 text-center form-group">
+                <label for="apellidos" class="color form-label">APELLIDOS</label>
+                <input type="text" class="form-control mt-3 mb-1" id="apellidos" formControlName="apellidos">
+                <div *ngIf="registerForm.get('apellidos')?.invalid && (registerForm.get('apellidos')?.touched || submitted)" class="color invalid-feedback mb-4">Los apellidos son obligatorios.</div>
+              </div>
+              <div class="color mb-5 text-center form-group">
+                <label for="email" class="color form-label">CORREO ELECTRÓNICO</label>
+                <input type="email" class="form-control mt-3 mb-1" id="email" formControlName="email">
+                <div *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || submitted)" class="color invalid-feedback mb-4">
+                  <div *ngIf="registerForm.get('email')?.errors?.['required']">El correo electrónico es obligatorio.</div>
+                  <div *ngIf="registerForm.get('email')?.errors?.['email']">El correo electrónico no es válido.</div>
+                </div>
+              </div>
+              <div class="color mb-5 text-center form-group">
+                <label for="contraseña" class="color form-label">CONTRASEÑA</label>
+                <input type="password" class="form-control mb-1 mt-3" id="contraseña" formControlName="contraseña">
+                <div *ngIf="registerForm.get('contraseña')?.invalid && (registerForm.get('contraseña')?.touched || submitted)" class="color invalid-feedback mb-4">
+                  <div *ngIf="registerForm.get('contraseña')?.errors?.['required']">La contraseña es obligatoria.</div>
+                  <div *ngIf="registerForm.get('contraseña')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres.</div>
+                </div>
+              </div>
+              <div class="color mb-5 text-center form-group">
+                <label for="confirmarContraseña" class="color form-label">CONFIRMAR CONTRASEÑA</label>
+                <input type="password" class="form-control mt-3 mb-1" id="confirmarContraseña" formControlName="confirmarContraseña">
+                <div *ngIf="registerForm.get('confirmarContraseña')?.invalid && (registerForm.get('confirmarContraseña')?.touched || submitted)" class="color invalid-feedback mb-4">La confirmación de la contraseña es obligatoria.</div>
+                <div *ngIf="registerForm.errors?.['notSame'] && (registerForm.get('confirmarContraseña')?.touched || submitted)" class="color invalid-feedback mb-4">Las contraseñas no coinciden.</div>
+              </div>
+              <div class="color mb-5 text-center form-group">
+                <label for="imagen" class="color form-label">IMAGEN DE PERFIL</label>
+                <input type="file" class="form-control mt-3 mb-1" id="imagen" (change)="onFileChange($event)" accept="image/*">
+                <label class="color form-label">Opcional. Se utilizará una imagen estandar si no se selecciona ninguna.</label>
+              </div>
+              <div class="color container-fluid text-center mt-5 mb-4">
+                <button type="submit" class="btn mt-3 mb-4 btn-primary botonRegistro w-100">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

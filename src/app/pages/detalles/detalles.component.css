@@ -1,0 +1,84 @@
+h1 {
+    color: white;
+    font-family: 'Alegreya';
+    font-weight: 600;
+}
+
+.card-user {
+    background-color: #0000FF;
+    margin-left: 35px;
+    color: #ff7f50;
+    opacity: 90%;
+    font-family: 'Alegreya';
+    font-weight: 500;
+    border-radius: 25px;
+    border: 3px solid #ff7f50;
+}
+strong {
+    color: white;
+    margin-right: 8px;
+}
+
+p {
+    color: #ccff00;
+    font-size: 18px;
+}
+
+h4 {
+    color: #ccff00;
+}
+
+h2 {
+    color: #fff;
+    font-family: 'Raleway';
+    font-weight: 500;
+}
+
+.card-edit {
+    background-color: #ff7f50;
+    font-family: 'Alegreya';
+    font-weight: 500;
+    color: #0000FF;
+    font-size: 18px;
+    opacity: 90%;
+}
+.botonEditarC {
+    width: 30%;
+}
+
+.botonEditarC:hover {
+    width: 40%;
+    color: #ccff00;
+}
+
+.botonEditar {
+    background-color: #0000FF;
+    width: 30%;
+}
+
+.botonEditar:hover {
+    background-color: #0404b6;
+    color: #ccff00;
+    width: 40%;
+}
+
+.botonEdita {
+    width: 40%;
+    background-color: #ff7f50;
+}
+
+.botonEdita:hover {
+    width: 50%;
+    color: #ccff00;
+}
+
+.botonElimina {
+    width: 40%;
+    background-color: red;
+}
+
+.botonElimina:hover {
+    width: 50%;
+    background-color: rgb(202, 4, 4);
+    color: #ccff00;
+}

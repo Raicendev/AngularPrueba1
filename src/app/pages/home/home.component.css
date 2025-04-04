@@ -1,0 +1,40 @@
+.titulo {
+    font-family: 'Alegreya';
+    font-weight: 600;
+    color: white;
+    text-decoration: underline 5px #ccff00;
+}
+
+.texto {
+    font-family: 'Raleway';
+    font-weight: 400;
+    color: white;
+    font-size: 22px;
+    text-align: start;
+}
+
+.card {
+    background-color: #1E1E2F;
+    border-radius: 25px;
+    opacity: 85%;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+    border-radius: 25px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

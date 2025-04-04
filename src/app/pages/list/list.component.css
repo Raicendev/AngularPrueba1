@@ -1,0 +1,68 @@
+h1 {
+    color: white;
+    font-family: 'Alegreya';
+    font-weight: 600;
+}
+
+.par {
+    background-color: #0000ff;
+    opacity: 88%;
+    border-radius: 25px;
+    border: 3px solid #ff7f50;
+}
+
+.impar {
+    background-color: #ff7f50;
+    opacity: 88%;
+    border-radius: 25px;
+    border: 3px solid #0000ff;
+}
+
+h4 {
+    color: #ccff00;
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+
+.imagenCard {
+    border-radius: 50%;
+    width: 70%;
+}
+
+p {
+    font-family: 'Alegreya';
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+}
+
+.par button {
+    background-color: #ff7f50;
+    color: #0000ff;
+    width: 50%;
+    font-family: 'Raleway';
+    font-weight: 700;
+    border-radius: 25px;
+}
+
+.par button:hover {
+    background-color: #fd5c21;
+    color: #ccff00;
+    width: 75%;
+}
+
+.impar button {
+    background-color: #0000ff;
+    color: #ff7f50;
+    width: 50%;
+    font-family: 'Raleway';
+    font-weight: 700;
+    border-radius: 25px;
+}
+
+.impar button:hover {
+    background-color: #0303bd;
+    color: #ccff00;
+    width: 75%;
+}

@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a routerLink="home" class="enlaceIcono"><img src="Icono_Titulo.svg" class="imagenTitulo" alt="Logo"></a>
+        <h1 class="colorMenu fst-italic mt-4 mb-4 me-3">¡¡¡DESCONECTADOS!!! <br> UNA RED PARA TODOS</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mt-4 mb-4" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link colorMenu fst-italic" routerLink="home" routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link colorMenu fst-italic" routerLink="list" routerLinkActive="active">Usuarios</a>
+                </li>
+                @if (esAdmin){
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle colorMenu fst-italic" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrador</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item colorMenu fst-italic" routerLink="add">Añadir Usuario</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item colorMenu fst-italic" routerLink="list">Tabla de usuarios</a></li>
+                        </ul>
+                    </li>
+                }
+                @if (!estaLogueado) {
+                    <li class="nav-item">
+                        <a class="nav-link colorMenu fst-italic" routerLink="login" routerLinkActive="active">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link colorMenu fst-italic" routerLink="register" routerLinkActive="active">Registrarse</a>
+                    </li>
+                }
+                @if (estaLogueado) {
+                    <li class="nav-item">
+                        <a class="nav-link colorMenu fst-italic" (click)="logout()">Logout</a>
+                    </li>
+                }
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 text-end" id="campoBusqueda" name="campoBusqueda" [(ngModel)]="campoBusqueda" type="search" placeholder="Nombre">
+                <button class="btn btn-outline-success buscador" (click)="busqueda(campoBusqueda)">
+                    <div class="m-1" style="display: inline-flex; align-items: center;">
+                        <span class="material-symbols-outlined">search</span>BUSCAR
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>

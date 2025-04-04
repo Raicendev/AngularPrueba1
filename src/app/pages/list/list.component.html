@@ -1,0 +1,18 @@
+<h1 class="text-center mt-4 mb-4 display-2">Usuarios Disponibles</h1>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4 mb-5">
+    @for(usuario of users;track usuario.id; let i = $index) {
+        <div class="col">
+            <div class="card h-100 card-user align-items-center me-5 ms-5" [ngClass]="{'par': i % 2 === 0, 'impar': i % 2 !== 0}">
+                <h4 class="card-title mt-3">{{ usuario.nombre }}</h4>
+                <img src="http://localhost/Conexion_Laravel_Angular/storage/app/public/usuarios/{{ usuario.imagen }}" class="card-img-top mt-2 ms-4 me-4 imagenCard" alt="Imagen de perfil de {{ usuario.nombre }}" style="max-height: 150px; object-fit: fill;" />
+                <div class="card-body">
+                    <p class="card-text"><strong>Nombre:</strong> {{ usuario.nombre }}  {{ usuario.apellidos }}</p>
+                    <br>
+                    <div class="container-fluid text-center">
+                        <button class="btn btn-primary botonEdita" (click)="verUser(usuario.id)">VER MÁS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

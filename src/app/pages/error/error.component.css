@@ -1,0 +1,35 @@
+.card {
+    background-color: #0000FF;
+    opacity: 85%;
+    border-radius: 25px;
+    border: 3px solid #ccff00;
+}
+
+h2 {
+    color: white;
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+
+p {
+    color: white;
+    font-family: 'Alegreya';
+    font-weight: 500;
+}
+
+.imagen404 {
+    border-radius: 25px;
+    border: 3px solid #ccff00;
+}
+
+.botonV {
+    width: 50%;
+    background-color: #ff7f50;
+    color: #0000FF;
+}
+
+.botonV:hover {
+    width: 70%;
+    background-color: #f85e26;
+    color: #ccff00;
+}

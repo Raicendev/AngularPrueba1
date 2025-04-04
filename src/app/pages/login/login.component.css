@@ -1,0 +1,59 @@
+.botonLogin {
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 22px;
+    background-color: #ff7f50;
+    border: 0px;
+    color: #0000FF;
+    transition: transform 0.4s;
+}
+
+.botonLogin:hover {
+    background-color: #f85f27;
+    color:#ccff00;
+}
+
+.botonLogin:active {
+    transform: scale(0.7);
+}
+
+h2 {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 36px;
+    color: #ccff00;
+}
+
+label {
+    color: #ff7f50;
+    font-family: 'Alegreya';
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.card {
+    background-color: #0000FF;
+    opacity: 80%;
+}
+
+.enlaceLogin {
+    color: #ccff00 !important;
+    text-decoration: none;
+}
+
+.enlaceLogin:hover {
+    color: #afda06 !important;
+    text-decoration: underline;
+}
+
+.container {
+    align-content: center;
+    height: 50vh;
+}
+
+.titulo {
+    color: white;
+    font-family: 'Alegreya';
+    font-weight: 600;
+}

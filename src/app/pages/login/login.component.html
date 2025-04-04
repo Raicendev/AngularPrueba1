@@ -1,0 +1,29 @@
+<h1 class="text-center display-2 mt-4 titulo">ACCEDE A TU RED</h1>
+<div class="container mt-2 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg rounded">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">BIENVENIDO</h2>
+                    <form novalidate class="needs-validation">
+                        <div class="form-group">
+                            <label for="username" class="form-label">Usuario:</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Ingresa tu email" [(ngModel)]="userMail">
+                            <div class="invalid-feedback">El usuario es obligatorio y debe ser un email valido.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña" [(ngModel)]="password">
+                            <div class="invalid-feedback">La contraseña es obligatoria y debe tener al menos 8 caracteres.</div>
+                        </div>
+                        <div class="form-group text-center">
+                        <button type="submit" class="btn botonLogin btn-primary mt-3" (click)="validacion()">INICIAR SESIÓN</button></div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a routerLink="/register" class="text-muted enlaceLogin">¿No tienes una cuenta? Regístrate aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

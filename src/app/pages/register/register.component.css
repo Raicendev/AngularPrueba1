@@ -1,0 +1,52 @@
+*{
+    font-family: 'Alegreya';
+    font-weight: 500;
+    font-size: 22px;
+    color: #4f4f4f !important;
+}
+
+h2 {
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 36px;
+    color: #ccff00 !important;
+}
+
+.botonRegistro {
+    background-color: #ff7f50;
+    color: #ccff00 !important;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 22px;
+    transition: transform 0.4s;
+    width: 80% !important;
+    margin-bottom: 15px;
+    border-radius: 25px;
+}
+
+.botonRegistro:hover {
+    background-color: #fd581c;
+    color:#0000FF !important;
+}
+
+.botonRegistro:active {
+    transform: scale(0.7);
+}
+
+label {
+    color: #ff7f50 !important;
+}
+
+.color {
+    background-color: #0000FF !important;
+}
+
+.card {
+    opacity: 80%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    
+}
+.invalid-feedback {
+    color: #ccff00 !important;
+}

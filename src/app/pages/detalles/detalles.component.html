@@ -1,0 +1,59 @@
+@if(listaUsuarios.length > 0) {
+    <h1 class="text-center titulodetails mt-4 mb-4 display-2">Detalles de Usuarios</h1>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+        @for(usuario of listaUsuarios;track usuario.id) {
+            <div class="col">
+                <div class="card h-100 card-user align-items-center">
+                    <h4 class="card-title mt-3">{{ usuario.nombre }}</h4>
+                    <img src="http://localhost/Conexion_Laravel_Angular/storage/app/public/usuarios/{{ usuario.imagen }}" class="card-img-top mt-2 ms-4 me-4" alt="Imagen de perfil de {{ usuario.nombre }}" style="max-height: 150px; object-fit: contain;" />
+                    <div class="card-body">
+                        <p class="card-text"><strong>ID:</strong> {{ usuario.id }}</p>
+                        <p class="card-text"><strong>Nombre:</strong> {{ usuario.nombre }}  {{ usuario.apellidos }}</p>
+                        <p class="card-text"><strong>Email:</strong> {{ usuario.email }}</p>
+                        <p class="card-text"><strong>Categoría:</strong> {{ usuario.categoria }}</p>
+                        <br>
+                        <div class="container-fluid text-center">
+                            <button class="btn btn-primary botonEdita" (click)="editarUsuario(usuario)">Editar</button>
+                            <button class="btn btn-danger ms-md-2 botonElimina" (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    </div>
+    <div class="container-fluid text-center">
+        <button class="btn btn-secondary mt-3 mb-4" (click)="volver()">Volver a la lista</button>
+    </div>
+    
+}
+
+@if(mostrarFormularioEdicion && usuarioSeleccionado) {
+    <h2 class="text-center tituloFormulario display-3">Editar Usuario</h2>
+    <div class="container-fluid col-9 mt-4 mb-4 card card-edit">
+        <div class="card-body mt-3">
+            <form [formGroup]="formularioEdicion" (ngSubmit)="guardarUsuarioEditado()">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" formControlName="nombre" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="apellidos" class="form-label">Apellidos:</label>
+                    <input type="text" id="apellidos" formControlName="apellidos" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría:</label>
+                    <input type="text" id="categoria" formControlName="categoria" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="imagen" class="form-label">Imagen:</label>
+                    <input type="file" id="imagen" (change)="onFileChange($event)" class="form-control">
+                </div>
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-success botonEditar">Guardar</button>
+                    <button type="button" class="btn btn-secondary ms-2 botonEditarC" (click)="mostrarFormularioEdicion = false">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+}
